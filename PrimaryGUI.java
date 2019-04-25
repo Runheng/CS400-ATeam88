@@ -3,16 +3,13 @@ package application;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.DirectoryStream.Filter;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import org.json.simple.parser.ParseException;
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -22,14 +19,11 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundRepeat;
@@ -320,6 +314,7 @@ public class PrimaryGUI {
 				boolean noSelect = true;
 				// adding up the current quiz topic list
 				for (int i = 0; i < hbox.getChildren().size(); i++) {
+					@SuppressWarnings("unchecked")
 					ComboBox<String> current = (ComboBox<String>) hbox.getChildren().get(i);
 
 					if (current.getValue() != null) {
@@ -401,6 +396,7 @@ public class PrimaryGUI {
 		return scene;
 	}
 
+	@SuppressWarnings("static-access")
 	private Scene answerDisplayScene() {
 		BorderPane root = new BorderPane();
 		Label status = new Label("answer page");

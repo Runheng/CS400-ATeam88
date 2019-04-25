@@ -214,7 +214,8 @@ public class AddQuestion {
 
       if (!image.equals("none")) {
         try {
-          Image actualImage = new Image(image);
+          @SuppressWarnings("unused")
+		Image actualImage = new Image(image);
         } catch (Exception e1) {
           Alert badInputAlert = new Alert(AlertType.WARNING);
           badInputAlert.setTitle("Invalid input!");

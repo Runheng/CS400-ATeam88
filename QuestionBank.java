@@ -62,6 +62,7 @@ public class QuestionBank {
 			// and skip the question that has image path error
 			if (!imagepath.equals("none")) {
 				try {
+					@SuppressWarnings("unused")
 					Image image = new Image(imagepath);
 				} catch (Exception e) {
 					Alert badInputAlert = new Alert(AlertType.WARNING);

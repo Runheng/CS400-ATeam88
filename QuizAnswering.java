@@ -2,11 +2,9 @@ package application;
 
 import java.util.ArrayList;
 import javafx.geometry.Pos;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -93,11 +91,9 @@ public class QuizAnswering {
 				BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, null, BackgroundSize.DEFAULT);
 		root.setBackground(new Background(myBI));
 		return root;
-
 	}
 
 	public ToggleGroup getToggleGroup() {
-
 		return tg;
 	}
 }

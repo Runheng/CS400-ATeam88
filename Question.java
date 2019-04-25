@@ -1,6 +1,5 @@
 package application;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class Question {
@@ -8,7 +7,6 @@ public class Question {
   private ArrayList<Choice> choices;
   private String topic;
   private String imagePath;
-  private File file;
   private String metadata;
 
 
