@@ -8,11 +8,13 @@ package application;
 public class Choice {
   private boolean answer;
   private String content;
+  
 
 
   Choice(boolean answer, String content) {
     this.answer = answer;
     this.content = content;
+    
 
   }
 
@@ -25,7 +27,7 @@ public class Choice {
     this.content = content;
 
   }
-
+ 
   public boolean getAnswer() {
     return answer;
 
@@ -34,4 +36,5 @@ public class Choice {
   public String getContent() {
     return content;
   }
+  
 }

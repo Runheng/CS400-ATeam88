@@ -1,16 +1,20 @@
 package application;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class Question {
-  String description;
-  ArrayList<Choice> choices;
-  String topic;
-  String imagePath;
+  private String description;
+  private ArrayList<Choice> choices;
+  private String topic;
+  private String imagePath;
+  private File file;
+  private String metadata;
 
-  Question(String topic, String imagePath) {
-    this.topic = topic;
-    this.imagePath = imagePath;
+
+  Question() {
+   
+    this.choices = new ArrayList<Choice>();
   }
 
   public void addChoices(Choice choice) {
@@ -52,14 +56,27 @@ public class Question {
   /**
    * @return a choice for correct answer, return null for no current answer possible
    */
-  public Choice getAnswer() {
+  public String getAnswer() {
     for (Choice i : choices) {
       if (i.getAnswer() == true)
-        return i;
+        return i.getContent();
     }
     return null;
   }
 
+  public void addAllChoices(ArrayList<Choice> allChoices) {
+    this.choices = allChoices;
+  }
 
+  public void setMetadata(String metadata) {
+    this.metadata = metadata;
+  }
 
+  public String getMetadata() {
+    return this.metadata;
+  }
+
+  public ArrayList<Choice> getChoices() {
+    return this.choices;
+  }
 }
